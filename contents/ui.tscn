@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://contents/input.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.215686, 0.219608, 0.223529, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background panel" type="Panel" parent="."]
+margin_right = 1020.0
+margin_bottom = 603.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu buttons" type="Panel" parent="background panel"]
+margin_right = 1024.0
+margin_bottom = 53.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text editor area" type="TextEdit" parent="background panel"]
+margin_top = 53.0
+margin_right = 1020.0
+margin_bottom = 600.0
+highlight_current_line = true
+show_line_numbers = true
+draw_tabs = true
+draw_spaces = true
+highlight_all_occurrences = true
+smooth_scrolling = true
+hiding_enabled = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="open file" type="FileDialog" parent="background panel"]
+margin_left = 111.564
+margin_top = 120.982
+margin_right = 934.564
+margin_bottom = 535.982
+window_title = "open a file"
+resizable = true
+dialog_text = "open a file"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode = 0
+access = 2
+show_hidden_files = true
+current_dir = "/home"
+current_file = "home"
+current_path = "/home/home"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="save" type="FileDialog" parent="background panel"]
+margin_left = 111.564
+margin_top = 120.982
+margin_right = 934.564
+margin_bottom = 535.982
+window_title = "Salvar um Arquivo"
+resizable = true
+dialog_text = "open a file"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+access = 2
+show_hidden_files = true
+current_dir = "/home"
+current_file = "home"
+current_path = "/home/home"
+__meta__ = {
+"_edit_use_anchors_": false
+}
